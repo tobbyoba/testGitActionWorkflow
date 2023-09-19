@@ -1,12 +1,11 @@
 name: Terraform CI/CD
 
-on:
-  push:
-    branches:
-      - dev  # You can change this to your main branch name
+on: [push]
+
 env: 
-   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}
+   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY}}
+   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY}}
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
